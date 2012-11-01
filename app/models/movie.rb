@@ -8,6 +8,8 @@ class Movie < ActiveRecord::Base
     director = movie.director
     if (director.empty? == false)
       self.find_all_by_director(director)
+    else
+      return false
     end
   end
 end
